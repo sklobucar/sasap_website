@@ -16,7 +16,7 @@ library(tidyr)
 library(ggplot2)
 library(DT)
 ```
-
+#Load data
 Load data from [data](https://knb.ecoinformatics.org/knb/d1/mn/v2/object/urn%3Auuid%3Af119a05b-bbe7-4aea-93c6-85434dcb1c5e0)  .
 
 ```{r}
@@ -34,6 +34,8 @@ median_esc <- esc %>%
   summarize(median_escapement = median(escapement))
 ```
 
+
+#Bar plot
 ```{r}
 ggplot(median_esc, aes(Species, median_escapement)) +
   geom_col() +
